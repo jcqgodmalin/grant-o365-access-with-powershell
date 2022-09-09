@@ -25,7 +25,7 @@ Grant the JICAuthenticator app full access to the O365 mailbox steps:
  
 6.	Run the command `$session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/?SerializationLevel=Full -Credential $cred -Authentication Basic -AllowRedirection`
 
-7.	Run the command `Import -PSSession $session -Prefix o365`
+7.	Run the command `Import-PSSession $session -Prefix o365`
 
 8.	Run the command `New-o365serviceprincipal -AppId $myapp.AppId -ServiceId $myapp.ObjectId -DisplayName “Service Principal for <app-name>”`
 
